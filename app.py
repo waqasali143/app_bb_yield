@@ -3,7 +3,7 @@ import numpy as np
 import pickle
 
 # Import Model
-rf = pickle.load(open("D:/PIAIC COURSE/Miss Aqsa/app/yieldApp/w_rfm_model.pkl", 'rb'))
+#rf = pickle.load(open("D:/PIAIC COURSE/Miss Aqsa/app/yieldApp/w_rfm_model.pkl", 'rb'))
 xg = pickle.load(open("D:/PIAIC COURSE/Miss Aqsa/app/yieldApp/w_xgb_model.pkl", 'rb'))
 lgbm = pickle.load(open("D:/PIAIC COURSE/Miss Aqsa/app/yieldApp/w_gbm_model.pkl", 'rb'))
 
@@ -36,7 +36,7 @@ if Submit:
                       AverageOfLowerTRange , AverageRainingDays])
     query = query.reshape(1,7)
 
-    st.title("The Predicted Yield From RandomForest is " + str(int(rf.predict(query)[0])))
+    #st.title("The Predicted Yield From RandomForest is " + str(int(rf.predict(query)[0])))
 
     st.title("The Predicted Yield From XGBoost is " + str(int(xg.predict(query)[0])))
 
